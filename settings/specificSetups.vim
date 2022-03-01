@@ -36,7 +36,7 @@ noremap <C-b> :vsp<CR><C-W><C-L>:enew<CR>
 function! StartUp()
     simalt ~x
     if 0 == argc()
-        cd C:\work\docs\
+        cd ~\OneDrive - PERFORCE SOFTWARE, INC\progress
         NERDTree
     " else 
     "     cd argc()

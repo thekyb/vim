@@ -20,6 +20,8 @@ set ruler laststatus=2 number title
 set rulerformat=%l:%c ruler" Display current column/line
 set scrolloff=25  "or set so=20
 set titlestring=%f title    " Display filename in terminal window
+map <C-F3> :set wrap!<CR>
+oo
 
 """"""""""""""""""""""""""""""""""""""
 "           General Settings         "

@@ -10,7 +10,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'https://github.com/junegunn/vim-easy-align'
 Plug 'https://github.com/scrooloose/nerdcommenter'
 Plug 'https://github.com/scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'https://github.com/ivalkeen/nerdtree-execute.git'
+" Plug 'https://github.com/ivalkeen/nerdtree-execute.git'
 Plug 'https://github.com/szw/vim-dict.git'
 Plug 'szw/vim-g'
 Plug 'https://github.com/vim-scripts/dbext.vim.git'
@@ -51,6 +51,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive' " make git applicable 
 Plug 'mbbill/undotree'
 Plug 'Shougo/deoplete.nvim'
+Plug 'https://github.com/xavierd/clang_complete'
 " Plug 'deoplete-plugins/deoplete-jedi'
 " Plug 'davidhalter/jedi-vim'
 " Plug 'Shougo/context_filetype.vim'
@@ -73,6 +74,12 @@ vmap <Space>d y:Google <C-V> definition<CR>
 """"""""""""""""""""""""""""""""""""""
 "           NERDTree                 "
 """"""""""""""""""""""""""""""""""""""
+let g:clang_library_path='/usr/lib/llvm-3.8/lib'
+".....................................
+"
+""""""""""""""""""""""""""""""""""""""
+"           Clang_complete           "
+""""""""""""""""""""""""""""""""""""""
 let NERDTreeShowHidden=1
 let NERDTreeShowBookmarks=1
 noremap <Space>e :NERDTree<CR>
@@ -88,7 +95,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " air-line
 let g:airline_powerline_fonts = 0
-let g:airline_section_c = '%f'
+let g:airline_section_c = '%F'
 " Always show tabs
 set showtabline=2
 

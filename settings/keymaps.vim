@@ -57,6 +57,8 @@ nnoremap <M-h> :vertical resize -4<CR>
 nnoremap <M-l> :vertical resize +4<CR>
 "
 "Page down and up :    'ê'= Alt + j   and  'ë' = Alt + k
+"
+"
 noremap ê 10j 
 noremap ë 10k
 noremap ì 20l
@@ -64,6 +66,10 @@ noremap <down> 10j
 noremap <up> 10k
 noremap <left> 20h
 noremap <right> 20l
+noremap <S-down> 5j 
+noremap <S-up> 5k
+noremap <S-left> 10h
+noremap <S-right> 10l
 "end Page down and up 
 nnoremap <S-space> i<space><esc>
 if @% == '_vsvimrc'
@@ -89,7 +95,7 @@ vnoremap <C-Space> <Esc>l
 "          Search & Replace          "
 """"""""""""""""""""""""""""""""""""""
 noremap * *N
-vnoremap // y/<C-R>"<CR>
+vnoremap // y/<C-R>"<CR>N
 noremap <Space>r :reg<CR>
 noremap <Space>t :pu!=strftime('%c')<CR>
 noremap <C-f> /
