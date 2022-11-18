@@ -37,6 +37,7 @@ inoremap Ê <Esc>:m .+1<CR>==gi
 inoremap Ë <Esc>:m .-2<CR>==gi
 vnoremap Ë :m '<-2<CR>gv=gv
 vnoremap Ê :m '>+1<CR>gv=gv
+imap <S-BS> <ESC>bdwa
 
 nnoremap <S-M-j> :m .+1<CR>==
 nnoremap <S-M-k> :m .-2<CR>==
@@ -51,10 +52,10 @@ vnoremap > >gv
 vnoremap y ygv<esc>
 vnoremap Y y
 
-nnoremap <M-j> :resize -4<CR>
-nnoremap <M-k> :resize +4<CR>
-nnoremap <M-h> :vertical resize -4<CR>
-nnoremap <M-l> :vertical resize +4<CR>
+nnoremap <M-j> :resize -7<CR>
+nnoremap <M-k> :resize +7<CR>
+nnoremap <M-h> :vertical resize -7<CR>
+nnoremap <M-l> :vertical resize +7<CR>
 "
 "Page down and up :    'ê'= Alt + j   and  'ë' = Alt + k
 "
@@ -66,10 +67,10 @@ noremap <down> 10j
 noremap <up> 10k
 noremap <left> 20h
 noremap <right> 20l
-noremap <S-down> 5j 
-noremap <S-up> 5k
-noremap <S-left> 10h
-noremap <S-right> 10l
+noremap <S-down> 20j 
+noremap <S-up> 20k
+noremap <S-left> 40h
+noremap <S-right> 40l
 "end Page down and up 
 nnoremap <S-space> i<space><esc>
 if @% == '_vsvimrc'
@@ -79,17 +80,17 @@ else
     nnoremap <C-J> o<esc>
     nnoremap <C-U> O<esc>
 endif
-map <C-L> <C-W><C-L>
+map <C-l> <C-W><C-l>
 map <C-j> <C-W><C-j>
 map <C-k> <C-W><C-k>
-map <C-H> <C-W><C-H>
+map <C-h> <C-W><C-h>
 
 nmap <Tab> i<Tab><esc>l
-
 inoremap <C-J> <Esc>
-nnoremap <C-Space> <Esc>l
-inoremap <C-Space> <Esc>l
-vnoremap <C-Space> <Esc>l
+" make a new page to the next
+noremap <Space>n :vsp<CR><C-W><C-L>:enew<CR>
+" make a new page to the bottom
+noremap <Space>b :sp<CR><C-W><C-J>:enew<CR>
 
 """"""""""""""""""""""""""""""""""""""
 "          Search & Replace          "
@@ -98,27 +99,40 @@ noremap * *N
 vnoremap // y/<C-R>"<CR>N
 noremap <Space>r :reg<CR>
 noremap <Space>t :pu!=strftime('%c')<CR>
-noremap <C-f> /
+noremap <Space>T :pu!=strftime('%Y-%m-%d')<CR>
 " todo : let's set the config to findout words in folder
 " noremap <C-S-f> :vim
-noremap / /\c
 noremap <S-F> :%s/
+vmap <S-F> :s/
+
 " search Registry
 " noremap " :reg<CR>
 " copy file names
-nmap yf :let @* = expand("%")<CR>
-nmap yd :let @* = expand("%:p")<CR>
-nmap yD :let @* = expand('%:p:h')<CR>
+nmap yf :let @* = expand("%")<CR>:echo '<C-V>'<CR>
+nmap yd :let @* = expand("%:p")<CR>:echo '<C-V>'<CR>
+nmap yp :echo expand("%:p")<CR>
+nmap yD :let @* = expand('%:p:h')<CR>:echo '<C-V>'<CR>
 
-"""""""""""""""""""""""""""""""""""""
-"          Runby Languages                  "
+map <C-f> cd:vimgrep /
+nmap <C-f> cd:vimgrep /
+vmap <C-f> ycd:vimgrep /<C-v>/*.*
+nmap <C-right> :cnext<CR>
+nmap <C-left> :cbefore<CR>
+
+nmap cd :cd %:p:h<CR>
+
+""""""""""""""""""""""""""""""""""""""
+"          Run by executable (cmd)   "
 """"""""""""""""""""""""""""""""""""""
 "run python
-nmap <Space>v <Space>syd:!"C:\Users\Jean\AppData\Local\Programs\Microsoft VS Code\Code.exe" "<C-v>"<CR><CR> 
-nmap <Space>p <Space>syd:!python "<C-v>"<CR><CR> 
+nmap <leader>v <Space>syd:!"C:\Users\Jean\AppData\Local\Programs\Microsoft VS Code\Code.exe" "<C-v>"<CR><CR> 
+" nmap <leader>p <Space>syd:!python "<C-v>"<CR><CR> 
 "run Go
-nmap <Space>g <Space>syd:GoRun <C-v><CR>
-nmap <Space>b <Space>syd:GoBuild <C-v><CR> 
+" nmap <leader>g <Space>syd:GoRun <C-v><CR>
+" nmap <leader>b <Space>syd:GoBuild <C-v><CR> 
+"run executable file
+nmap <leader>c <Space>syd:!"<C-v>"<CR><CR> 
+nmap <leader>s <Space>syd:!"C:\Program Files\Sublime Text 3\sublime_text.exe" "<C-v>"<CR><CR> 
 
 
 """"""""""""""""""""""""""""""""""""""

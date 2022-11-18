@@ -4,16 +4,23 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 "...............................................
 " source $VIM/settings/mockingmswin.vim
+source $VIM/settings/basicSetups.vim
 source $VIM/settings/plugins.vim
 source $VIM/settings/settings.vim
 source $VIM/settings/keymaps.vim
 source $VIM/settings/specificSetups.vim
+source $VIM/settings/pageShortcuts.vim
+source $VIM/settings/toolsShortcuts.vim
 "
 "...................................................................
 filetype plugin on 
 autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
 autocmd! bufwritepost .vimrc source %
 "...................................................................
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
 
 
 set diffexpr=MyDiff()
@@ -30,7 +37,7 @@ function MyDiff()
     let eq = ''
     if $VIMRUNTIME =~ ' '
         if &sh =~ '\<cmd'
-            let cmd = '""' . $VIMRUNTIME . '\diff"'
+            let cmd = '""' . $VIMRUNTIME . ' q\diff"'
             let eq = '"'
         else
             let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
