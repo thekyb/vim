@@ -1,6 +1,6 @@
 " "    Vim tools Shortcuts              "
 " """"""""""""""""""""""""""""""""""""""
-nmap <leader>d istd::cout << ""<< <<"  [test Jean]: " << std::endl; //TODO JEAN: please delete this line before commit. 
+nmap <leader>d istd::cout <<"  [test Jean]: " << ""<< << std::endl; //TODO JEAN: please delete this line before commit.<DEL><DEL><DEL><DEL><DEL><DEL><DEL><DEL>
 
 
 " make current json structure beautiful

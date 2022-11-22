@@ -63,7 +63,7 @@ noremap <Space>f va{zf
 """""""""""""""""""""""""""""""""""""""
 set hlsearch " highlight matches, in normal mode try typing * or even g* when cursor on string
 set incsearch  " search as characters are entered, as you type in more characters, the search is refined
-set ignorecase  " ignore case when searching
+" set ignorecase  " ignore case when searching
 " F5 will find the next occurrence after vimgrep
 map <F5> :cp!<CR>
 " F6 will find the previous occurrence after vimgrep

@@ -90,7 +90,7 @@ inoremap <C-J> <Esc>
 " make a new page to the next
 noremap <Space>n :vsp<CR><C-W><C-L>:enew<CR>
 " make a new page to the bottom
-noremap <Space>b :sp<CR><C-W><C-J>:enew<CR>
+noremap <Space>h :sp<CR><C-W><C-J>:enew<CR>
 
 """"""""""""""""""""""""""""""""""""""
 "          Search & Replace          "

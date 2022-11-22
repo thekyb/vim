@@ -29,6 +29,7 @@ command! FN execute ":NERDTree C:\\work\\sandbox\\FN-FP\\"
 command! FP execute ":NERDTree C:\\work\\sandbox\\FN-FP\\"
 command! FNFP execute ":NERDTree C:\\work\\sandbox\\FN-FP\\"
 command! Bug execute ":NERDTree C:\\work\\sandbox\\bug\\"
+nmap <leader>e :Bug<CR>
 command! Current execute ":NERDTree C:\work\sandbox\bug\PR56781\test2"
 
 
