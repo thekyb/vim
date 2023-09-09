@@ -1,0 +1,12 @@
+# {date}
+
+## Daily checklist
+
+* [ ] Take a vitamin C
+* [ ] Eat your daily carrot!
+
+## Todo
+
+## Notes
+
+

@@ -51,8 +51,8 @@ vnoremap > >gv
 "Set t current windowindent control
 vnoremap y ygv<esc>
 vnoremap Y "+y
-nnoremap yY 0vj"+y
-nnoremap yy 0vjy
+nnoremap yY 0v$"+y
+nnoremap yy 0v$"+y
 
 nnoremap <M-j> :resize -7<CR>
 nnoremap <M-k> :resize +7<CR>

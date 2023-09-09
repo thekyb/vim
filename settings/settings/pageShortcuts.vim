@@ -21,7 +21,7 @@ command! DC execute ":e ~/my_site/daily todo.md"
 " todo list document
 command! Todo execute ":vsp <bar> :e ~/my_site/todo.md"
 command! TC execute ":e \my_site/todo.md"
-command! TS execute ":vsp <bar> :e ~/my_site/todo_school.md"
+
 " open Sandbox
 command! Sand execute ":NERDTree ~/work/sandbox/"
 command! FN execute ":NERDTree ~/work/sandbox/FN-FP/"
