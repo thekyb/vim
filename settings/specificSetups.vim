@@ -3,34 +3,35 @@
 """""""""""""""""""""""""""""""""""""""
 " set backupdir=~/tmp,/tmp " backups (~)
 " set directory=~/tmp,/tmp " swap files
-set nowritebackup
-set noswapfile
+" set nowritebackup
+" set noswapfile
 " set guioptions -=m 
-if !isdirectory('~/tools/')
-     call mkdir('~/tools/', "p")
+if !isdirectory('vimbackup/')
+     call mkdir('vimbackup/', "p")
+     echo("test")
  endif
-if !isdirectory('~/tools/files')
-    call mkdir('~/tools/files', "p")
+if !isdirectory('vimbackup/files')
+    call mkdir('vimbackup/files', "p")
 endif
-if !isdirectory('~/tools/files/backup')
-    call mkdir('~/tools/files/backup', "p")
+if !isdirectory('vimbackup/files/backup')
+    call mkdir('vimbackup/files/backup', "p")
 endif
-if !isdirectory('~/tools/files/swap')
-    call mkdir('~/tools/files/swap', "p")
+if !isdirectory('vimbackup/files/swap')
+    call mkdir('vimbackup/files/swap', "p")
 endif
-if !isdirectory('~/tools/files/undo')
-    call mkdir('~/tools/files/undo', "p")
+if !isdirectory('vimbackup/files/undo')
+    call mkdir('vimbackup/files/undo', "p")
 endif
 
-set nobackup 
-set backupdir   =~/tools/files/backup/
+" set nobackup 
+set backupdir   =vimbackup/files/backup/
 set backupext   =-vimbackup
 set backupskip  =
-set directory   =~/tools/files/swap/
+set directory   =vimbackup/files/swap/
 set updatecount =100
-set undodir     =~/tools/files/undo/
+set undodir     =vimbackup/files/undo/
 set undofile
-set viminfo     ='100,n~/tools/files/info/viminfo
+set viminfo     ='100,n~/vimbackup/files/info/viminfo
 
 
 """""""""""""""""""""""""""""""""""""""
