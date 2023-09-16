@@ -25,6 +25,8 @@ nnoremap <silent> <Space>ww :call WindowSwap#EasyWindowSwap()<CR>
 "Quick save command
 noremap <Space>s :w<CR>
 vnoremap <Space>s <C-C>:w<CR>
+noremap <Space>S :w!<CR>
+vnoremap <Space>S <C-C>:w!<CR>
 "Tab backword in insertmode
 inoremap <S-Tab> <C-d>
 inoremap <C-j> <esc>l
@@ -41,7 +43,8 @@ vnoremap <C-j> <esc>l
 " command! Vimrc execute ":e $VIM/vimrc"
 command! Rc execute ":vsp <bar> :e $VIM/vimrc"
 command! RC execute ":e $VIM/vimrc"
-command! RR execute "source $VIM/vimrc"
+command! Rr execute "source $VIM/vimrc"
+command! RR execute ":w! <bar> source $VIM/vimrc"
 
 """"""""""""""""""""""""""""""""""""""
 "           StartUp                  "

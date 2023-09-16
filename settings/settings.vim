@@ -17,7 +17,7 @@ set nocursorcolumn
 set relativenumber
 set ruler laststatus=2 number title
 set rulerformat=%l:%c ruler" Display current column/line
-set scrolloff=25  "or set so=20
+set scrolloff=17  "or set so=20
 set titlestring=%f title    " Display filename in terminal window
 set nowrap
 " Start_Original_Kyb_Here / Run_VimRC / StartUp / 

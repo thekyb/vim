@@ -2,3 +2,8 @@
 *.vim.un~
 /vim82Plugged
 /vim82
+/addons
+/registry
+/vimbackup
+vimrc.tiny
+

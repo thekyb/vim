@@ -131,9 +131,9 @@ let g:airline_theme='jellybeans'
 """"""""""""""""""""""""""""""""""""""
 "           Commentary               "
 """"""""""""""""""""""""""""""""""""""
-nmap <C-/> gcc
-imap <C-/> <esc>gcc
-vmap <C-/> gc
+map <C-_> gcc
+imap <C-_> <esc>gcc
+vmap <C-_> gc
 nmap <F8> :TagbarToggle<CR>
 ".....................................
 
@@ -156,7 +156,7 @@ vmap fs <Plug>(easymotion-bd-w)
 " C:\Users\jean\vimwiki\index.wiki
 """"""""""""""""""""""""""""""""""""""
 nnoremap <leader>z /daily<CR>
-let g:vimwiki_list = [{'path': '~/my_site/', 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '$HOME/my_site/', 'syntax': 'markdown', 'ext': '.md'}]
 " let g:vimwiki_ext2syntax = [{'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}]
 let g:vimwiki_markdown_link_ext = 1
 command! Vt execute ":VimwikiTable"

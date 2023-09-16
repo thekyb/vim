@@ -1,37 +1,36 @@
 """""""""""""""""""""""""""""""""""""""
 "           Backup options            "
 """""""""""""""""""""""""""""""""""""""
-" set backupdir=~/tmp,/tmp " backups (~)
-" set directory=~/tmp,/tmp " swap files
+" set backupdir=$HOME/tmp,/tmp " backups ($HOME)
+" set directory=$HOME/tmp,/tmp " swap files
 " set nowritebackup
 " set noswapfile
 " set guioptions -=m 
-if !isdirectory('vimbackup/')
-     call mkdir('vimbackup/', "p")
-     echo("test")
+if !isdirectory('$HOME/vimbackup/')
+    call mkdir('$HOME/vimbackup/', "p")
  endif
-if !isdirectory('vimbackup/files')
-    call mkdir('vimbackup/files', "p")
+if !isdirectory('$HOME/vimbackup/files')
+    call mkdir('$HOME/vimbackup/files', "p")
 endif
-if !isdirectory('vimbackup/files/backup')
-    call mkdir('vimbackup/files/backup', "p")
+if !isdirectory('$HOME/vimbackup/files/backup')
+    call mkdir('$HOME/vimbackup/files/backup', "p")
 endif
-if !isdirectory('vimbackup/files/swap')
-    call mkdir('vimbackup/files/swap', "p")
+if !isdirectory('$HOME/vimbackup/files/swap')
+    call mkdir('$HOME/vimbackup/files/swap', "p")
 endif
-if !isdirectory('vimbackup/files/undo')
-    call mkdir('vimbackup/files/undo', "p")
+if !isdirectory('$HOME/vimbackup/files/undo')
+    call mkdir('$HOME/vimbackup/files/undo', "p")
 endif
 
 " set nobackup 
-set backupdir   =vimbackup/files/backup/
+set backupdir   =$HOME/vimbackup/files/backup/
 set backupext   =-vimbackup
 set backupskip  =
-set directory   =vimbackup/files/swap/
+set directory   =$HOME/vimbackup/files/swap/
 set updatecount =100
-set undodir     =vimbackup/files/undo/
+set undodir     =$HOME/vimbackup/files/undo/
 set undofile
-set viminfo     ='100,n~/vimbackup/files/info/viminfo
+set viminfo     ='100,n$HOME/vimbackup/files/info/viminfo
 
 
 """""""""""""""""""""""""""""""""""""""
@@ -57,7 +56,7 @@ noremap <Space>f va{zf
 " autocmd BufWinEnter ?* silent loadview
 "...................................................................
 
-" put in your ~/.vimrc file
+" put in your $HOME/.vimrc file
 
 """""""""""""""""""""""""""""""""""""""
 "    Find_as_a_list                   " " START search related configs and helps
