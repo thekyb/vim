@@ -49,10 +49,10 @@ vnoremap Ê :m '>+1<CR>gv=gv
 " imap <S-BS> <ESC>bdwa
 nnoremap <C-S-down> :m .+1<CR>
 nnoremap <C-S-up> :m .-2<CR>
-inoremap <C-S-j> <Esc>:m .+1<CR>==gi
-inoremap <C-S-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-S-j> :m '>+1<CR>gv=gv
-vnoremap <C-S-k> :m '<-2<CR>gv=gv
+inoremap <C-S-down> <Esc>:m .+1<CR>==gi
+inoremap <C-S-up> <Esc>:m .-2<CR>==gi
+vnoremap <C-S-down> :m '>+1<CR>gv=gv
+vnoremap <C-S-up> :m '<-2<CR>gv=gv
 
 vnoremap < <gv
 vnoremap > >gv
@@ -63,22 +63,19 @@ nnoremap yY 0vj"+y
 nnoremap yy 0vj"+y
 
 " "" this condition is for Windows!! =======================================
-" nnoremap <M-j> :resize -7<CR>
-" nnoremap <M-k> :resize +7<CR>
-" nnoremap <M-h> :vertical resize -7<CR>
-" nnoremap <M-l> :vertical resize +7<CR>
+nnoremap <M-j> :resize -7<CR>
+nnoremap <M-k> :resize +7<CR>
+nnoremap <M-h> :vertical resize -7<CR>
+nnoremap <M-l> :vertical resize +7<CR>
 " "" this condition is for Linux!! =======================================
-nnoremap <A-j> :resize -7<CR>
-" nnoremap <M-k> :resize +7<CR>
-" nnoremap <M-h> :vertical resize -7<CR>
-" nnoremap <M-l> :vertical resize +7<CR>
+" nnoremap <C-S-J> :resize -7<CR>
+" nnoremap <C-S-K> :resize +7<CR>
+" nnoremap <C-S-H> :vertical resize -7<CR>
+" nnoremap <C-S-L> :vertical resize +7<CR>
 
 "Page down and up :    'ê'= Alt + j   and  'ë' = Alt + k
 "
 "
-noremap ê 10j 
-noremap ë 10k
-noremap ì 20l
 noremap <down> 10j 
 noremap <up> 10k
 noremap <left> 20h
